@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>internship</title>
+  <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script><link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Tac-Tic-Tec</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Dashbord</p>
+                <li>
+                    <a href="#">Home</a>
+                </li>        
+                <li>
+                    <a href="#">Tactics vault</a>
+                </li>
+                <li>
+                    <a href="#">Schedule Generator</a>
+                </li>
+                <li>
+                    <a href="#">Weekly training</a>
+                </li>
+                <li>
+                    <a href="#">Team Metrics</a>
+                </li>
+                <li>
+                    <a href="#">Customization</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a  class="article">Select your Team</a>
+                </li>
+                <li>
+                    <a class="download">Team Name</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+
+        <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn">
+                        <i class=" fa-align-left"></i>
+                        <span>Teams</span>
+                        
+                    </button>
+                    <button type="button" id="sidebarCollapse" class="btn btn">
+                        <i class=" fa-align-left"></i>
+                        <span>U23</span>
+                        
+                    </button>
+                    <button type="button" id="sidebarCollapse" class="btn btn">
+                        <i class=" fa-align-left"></i>
+                        <span>U19</span>
+                        
+                    </button>                    
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Marcus</a>
+                            </li>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>            
+
+            <div class="container mt-5">
+                <button type="button" onsubmit="event.preventDefault();onFormSubmit();" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">Add New Schedule</button>
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Create New Schedule</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label required">Schedule Name</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label required">Start Date</label>
+                                        <input type="email" class="form-control">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label required">End Date</label>
+                                        <textarea class="form-control"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-danger">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+
+            <li>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a href="#Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><h1>Winter Traninig Schedule</h1>
+                    <h4>Start Date | End Date</h4></a>
+                <ul class="collapse list-unstyled" id="Submenu">
+                
+                    <div id="col-xs-9">
+                    <li>
+                        <td><input type="radio" class="btn-check" name="options1" id="option2" autocomplete="off">
+                            <label class="btn btn-outline-success" for="option2">Monday</label></td>
+                        <td> <a href="#"><input type="radio" class="btn-check" name="options1" id="option2" autocomplete="off">
+                            <label class="btn btn-outline-success" for="option2">Monday</label></a></td>
+                            <td><input type="radio" class="btn-check" name="options1" id="option2" autocomplete="off">
+                                <label class="btn btn-outline-success" for="option2">Monday</label></td>
+                            <td> <a href="#"><input type="radio" class="btn-check" name="options1" id="option2" autocomplete="off">
+                                <label class="btn btn-outline-success" for="option2">Monday</label></a></td>
+                                <td><input type="radio" class="btn-check" name="options1" id="option2" autocomplete="off">
+                                    <label class="btn btn-outline-success" for="option2">Monday</label></td>
+                                <td> <a href="#"><input type="radio" class="btn-check" name="options1" id="option2" autocomplete="off">
+                                    <label class="btn btn-outline-success" for="option2">Monday</label></a></td>
+                                    <td> <a href="#"><input type="radio" class="btn-check" name="options1" id="option2" autocomplete="off">
+                                     <label class="btn btn-outline-success" for="option2">Monday</label></a></td>                                       
+                    </li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+                <a href="#enu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><h1>Winter Traninig Schedule</h1>
+                <h3>Start Date | End Date</h3></a>
+                <ul class="collapse list-unstyled" id="enu">
+                    <li>
+                        <td><input type="radio" class="btn-check" name="options1" id="option2" autocomplete="off">
+                            <label class="btn btn-outline-success" for="option2">Monday</label></td>
+                        <td> <a href="#"><input type="radio" class="btn-check" name="options1" id="option2" autocomplete="off">
+                            <label class="btn btn-outline-success" for="option2">Monday</label></a></td>
+                            <td><input type="radio" class="btn-check" name="options1" id="option2" autocomplete="off">
+                                <label class="btn btn-outline-success" for="option2">Monday</label></td>
+                            <td> <a href="#"><input type="radio" class="btn-check" name="options1" id="option2" autocomplete="off">
+                                <label class="btn btn-outline-success" for="option2">Monday</label></a></td>
+                                <td><input type="radio" class="btn-check" name="options1" id="option2" autocomplete="off">
+                                    <label class="btn btn-outline-success" for="option2">Monday</label></td>
+                                <td> <a href="#"><input type="radio" class="btn-check" name="options1" id="option2" autocomplete="off">
+                                    <label class="btn btn-outline-success" for="option2">Monday</label></a></td>
+                                    <td> <a href="#"><input type="radio" class="btn-check" name="options1" id="option2" autocomplete="off">
+                                     <label class="btn btn-outline-success" for="option2">Monday</label></a></td>                                       
+                    </li>
+
+            </li>
+            <td>
+
+
+                    <tbody>
+                    </tbody>
+                </table>
+            </td>
+        </nav>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
